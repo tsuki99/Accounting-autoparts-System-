@@ -7,12 +7,17 @@ import javafx.scene.text.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.collections.*;
 import javafx.util.Duration;
+
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.List;
 import javafx.scene.layout.AnchorPane;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
+import static com.sun.java.accessibility.util.AWTEventMonitor.addWindowListener;
 
 public class Controller { // метод для керування усіма функціями інтерфейсу
 
@@ -151,6 +156,8 @@ public class Controller { // метод для керування усіма ф�
             event.consume();
 
         });
+
+
 
 
     }

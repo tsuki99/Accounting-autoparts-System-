@@ -6,7 +6,11 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.IOException;
+
+import static com.sun.java.accessibility.util.AWTEventMonitor.addWindowListener;
 
 public class Main extends Application { // головний клас проекту для запуску програми з інтерфейсом
     @Override
@@ -17,7 +21,12 @@ public class Main extends Application { // головний клас проек�
         stage.setScene(scene);
         stage.show();
 
+        stage.setOnCloseRequest(event -> {
+            System.out.println("\nЗавершення роботи програми...");
+            System.exit(0);
+        });
     }
+
 
     public static void main(String[] args) { // метод запуску програми, що запускає інтерфейс
         launch();
