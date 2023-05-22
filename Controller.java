@@ -52,6 +52,8 @@ public class Controller { // метод для керування усіма ф�
     @FXML
     void initialize() {
 
+        System.out.println("Початок роботи програми!");
+
         DatabaseHandler dbHandler = new DatabaseHandler();
 
         button_add.setOnAction((event) -> { // Використання кнопки додавання запчастин
